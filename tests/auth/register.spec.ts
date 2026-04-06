@@ -33,8 +33,6 @@ test('User can register and logout successfully', async ({ page }) => {
         user.password
     );
 
-    //   await registerPage.submit();
-
     // Step 2: Verify redirect to home
     await expect(page).toHaveURL('/');
 
@@ -43,4 +41,11 @@ test('User can register and logout successfully', async ({ page }) => {
 
     // Step 4: Verify logout success
     await expect(page.locator('text=Login')).toBeVisible();
+
+    
+    // 📸 Screenshot before submit
+    await page.screenshot({ path: 'screenshots/register-before.png' });
+
+    // 📸 Screenshot after login
+    await page.screenshot({ path: 'screenshots/register-after.png' });
 });

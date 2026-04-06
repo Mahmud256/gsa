@@ -1,7 +1,7 @@
 import { Page } from '@playwright/test';
 
 export class RegisterPage {
-  constructor(private page: Page) {}
+  constructor(private page: Page) { }
 
   async goto() {
     await this.page.goto('/register'); // baseURL used from config
@@ -14,5 +14,8 @@ export class RegisterPage {
     await this.page.locator('input[name="password"]').fill(password);
 
     await this.page.locator('button:has-text("Register")').click();
+
+    // 🔥 Anti-flaky wait (important)
+    await this.page.waitForLoadState('networkidle');
   }
 }
