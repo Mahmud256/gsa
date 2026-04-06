@@ -1,6 +1,6 @@
 import { Page } from '@playwright/test';
 
-export class AssignmentPage {
+export class CreateAssignmentPage {
   constructor(private page: Page) { }
 
   async goto() {
