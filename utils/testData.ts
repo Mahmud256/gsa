@@ -4,3 +4,25 @@ export const user = {
   password: '@A123456',
   photo: 'https://i.ibb.co/7tcFdZB/d1.jpg'
 };
+
+export const createA = {
+  photo: 'https://i.ibb.co/7tcFdZB/d1.jpg',
+  title: 'Automation Test Assignment',
+  marks: '100',
+  assignmentLevel: 'easy',
+  date: '04/10/2026',
+  description: 'This is a test assignment created by Playwright'
+};
+
+export const updateA = {
+  photo: 'https://i.ibb.co/7tcFdZB/d1.jpg',
+  title: 'Automation Test Assignment',
+  marks: '100',
+  assignmentLevel: 'easy',
+  date: '04/10/2026',
+  description: 'This is a test assignment updated by Playwright'
+};
+
+export const deleteA = {
+  id: '69d556703ec0ea81081efe8c'
+};

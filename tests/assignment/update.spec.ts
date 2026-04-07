@@ -3,9 +3,10 @@ import { UpdateAssignmentPage } from '../../pages/UpdateAssignmentPage';
 import { LoginPage } from '../../pages/LoginPage';
 import { user } from '../../utils/testData';
 import { NavbarPage } from '../../pages/NavbarPage';
+import { updateA } from '../../utils/testData';
 
 
-test.only('User can update assignment successfully', async ({ page }) => {
+test('User can update assignment successfully', async ({ page }) => {
   const loginPage = new LoginPage(page);
   const assignment = new UpdateAssignmentPage(page);
   const navbar = new NavbarPage(page);
@@ -19,14 +20,14 @@ test.only('User can update assignment successfully', async ({ page }) => {
   await assignment.goto();
 
   await assignment.updateAssignment(
-    'https://i.ibb.co/7tcFdZB/d1.jpg',
-    'Automation Test Assignment',
-    '100',
-    'easy',
-    '04/10/2026',
-    'This is a test assignment updated by Playwright'
+    updateA.photo,
+    updateA.title,
+    updateA.marks,
+    updateA.assignmentLevel,
+    updateA.date,
+    updateA.description
   );
-  
+
 
   // Step 3: Logout
   await navbar.logout();
