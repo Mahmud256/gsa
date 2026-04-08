@@ -6,7 +6,7 @@ import { NavbarPage } from '../../pages/NavbarPage';
 import { updateA } from '../../utils/testData';
 
 
-test('User can update assignment successfully', async ({ page }) => {
+test.only('User can update assignment successfully', async ({ page }) => {
   const loginPage = new LoginPage(page);
   const assignment = new UpdateAssignmentPage(page);
   const navbar = new NavbarPage(page);
@@ -20,6 +20,7 @@ test('User can update assignment successfully', async ({ page }) => {
   await assignment.goto();
 
   await assignment.updateAssignment(
+    updateA.id,
     updateA.photo,
     updateA.title,
     updateA.marks,

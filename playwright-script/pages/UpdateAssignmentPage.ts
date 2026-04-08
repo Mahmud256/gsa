@@ -4,16 +4,17 @@ export class UpdateAssignmentPage {
     constructor(private page: Page) { }
 
     async goto() {
-        await this.page.goto('/updateassignment/69d4074b6e4fe9ab5b50e452');
+        await this.page.goto('/assignments');
     }
 
 
-    // async goto(id: string) {
-    //     await this.page.goto(`/updateassignment/${id}`);
-    // }
+    async updateAssignment(id: string, photo: string, title: string, marks: string, assignmentLevel: string, date: string, description: string) {
 
-
-    async updateAssignment(photo: string, title: string, marks: string, assignmentLevel: string, date: string, description: string) {
+        const card = this.page.locator('div.card').filter({
+            has: this.page.locator(`a[href="/updateassignment/${id}"]`)
+        });
+        
+        await card.locator(`a[href="/updateassignment/${id}"]`).click();
 
         await this.page.locator('input[type="url"]').fill(photo);
         await this.page.locator('input[name="title"]').fill(title);
@@ -29,6 +30,8 @@ export class UpdateAssignmentPage {
             .fill(description);
 
         await this.page.locator('input[type="submit"]').click();
+
+
 
 
         // 🔥 anti-flaky wait
