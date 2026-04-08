@@ -27,3 +27,10 @@ export const updateA = {
 export const deleteA = {
   id: '69d556703ec0ea81081efe8c'
 };
+
+export const submitA = {
+  id: '69d4074b6e4fe9ab5b50e452',
+  examinee: 'Test Teacher',
+  pdf: 'https://i.ibb.co/7tcFdZB/d1.jpg',
+  note: 'This is a test submission created by Playwright'
+};

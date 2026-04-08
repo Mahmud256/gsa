@@ -34,8 +34,8 @@ test('User can update assignment successfully', async ({ page }) => {
   await navbar.logout();
 
   // 📸 Screenshot before submit
-  await page.screenshot({ path: 'screenshots/assignment create-before.png' });
+  await page.screenshot({ path: 'screenshots/assignment update-before.png' });
 
   // 📸 Screenshot after submit
-  await page.screenshot({ path: 'screenshots/assignment create-after.png' });
+  await page.screenshot({ path: 'screenshots/assignment update-after.png' });
 });
