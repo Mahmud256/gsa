@@ -18,7 +18,7 @@ export const updateA = {
   id: '69d4074b6e4fe9ab5b50e452',
   photo: 'https://i.ibb.co/7tcFdZB/d1.jpg',
   title: 'Automation Test Assignment',
-  marks: '50',
+  marks: '100',
   assignmentLevel: 'easy',
   date: '04/10/2026',
   description: 'This is a test assignment updated by Playwright'
